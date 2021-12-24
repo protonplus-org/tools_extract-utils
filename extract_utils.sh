@@ -95,7 +95,7 @@ function setup_vendor() {
     fi
 
     if [ -z "$PATCHELF" ]; then
-        export PATCHELF="$ANDROID_ROOT"/prebuilts/extract-tools/${HOST}-x86/bin/patchelf
+        export PATCHELF="$ANDROID_ROOT"/prebuilts/tools-extras/${HOST}-x86/bin/patchelf
     fi
 }
 
@@ -1231,16 +1231,16 @@ function oat2dex() {
     local OAT=
 
     if [ -z "$BAKSMALIJAR" ] || [ -z "$SMALIJAR" ]; then
-        export BAKSMALIJAR="$ANDROID_ROOT"/prebuilts/extract-tools/common/smali/baksmali.jar
-        export SMALIJAR="$ANDROID_ROOT"/prebuilts/extract-tools/common/smali/smali.jar
+        export BAKSMALIJAR="$ANDROID_ROOT"/prebuilts/tools-extras/common/smali/baksmali.jar
+        export SMALIJAR="$ANDROID_ROOT"/prebuilts/tools-extras/common/smali/smali.jar
     fi
 
     if [ -z "$VDEXEXTRACTOR" ]; then
-        export VDEXEXTRACTOR="$ANDROID_ROOT"/prebuilts/extract-tools/${HOST}-x86/bin/vdexExtractor
+        export VDEXEXTRACTOR="$ANDROID_ROOT"/prebuilts/tools-extras/${HOST}-x86/bin/vdexExtractor
     fi
 
     if [ -z "$CDEXCONVERTER" ]; then
-        export CDEXCONVERTER="$ANDROID_ROOT"/prebuilts/extract-tools/${HOST}-x86/bin/compact_dex_converter
+        export CDEXCONVERTER="$ANDROID_ROOT"/prebuilts/tools-extras/${HOST}-x86/bin/compact_dex_converter
     fi
 
     # Extract existing boot.oats to the temp folder
